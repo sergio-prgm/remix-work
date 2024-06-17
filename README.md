@@ -1,40 +1,35 @@
-# Welcome to Remix!
+# Remix testing repo
 
-- 📖 [Remix docs](https://remix.run/docs)
+## TODO
 
-## Development
+- [x] setup tailwind
+- [x] setup shadcn/ui
+- [x] setup darkmode
+- [x] propse basic layout
+- [ ] use proper breadcrumbs
+- [ ] get theming working
 
-Run the dev server:
+### Research
 
-```shellscript
-npm run dev
-```
+- [ ] Streaming data (response from AI)
 
-## Deployment
+## Segments worked on
 
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Segment | Sub-segment | Progress |
+--------|-------------|--------- |
+Candidates | List | - |
+Candidates | Upload | - |
+Candidates | Individual | - |
+JobOffers | List | - |
+JobOffers | New | - |
+JobOffers | Individual | - |
+JobOffers | Assessment | - |
+JobOffers | Top Candidates | - |
+JobOffers | Qualified/Unqualified | - |
+JobOffers | Questionnaire | - |
+Questions | New | - |
+Questions | List | - |
+Platform | New | - |
+Platform | Launch | - |
+*Prompts* | List | - |
+*Prompts* | New | - |
