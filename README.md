@@ -6,7 +6,7 @@
 - [x] setup shadcn/ui
 - [x] setup darkmode
 - [x] propse basic layout
-- [ ] use proper breadcrumbs
+- [x] use proper breadcrumbs
 - [ ] get theming working
 
 ### Research

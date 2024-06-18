@@ -7,17 +7,27 @@ import {
   BreadcrumbSeparator,
 } from "~/components/ui/breadcrumb";
 import { Fragment } from "react/jsx-runtime";
+import { CustomMatch } from "./route";
 
-import { Link, useLocation } from "@remix-run/react";
-
-export function Breadcrumbs() {
-  const location = useLocation();
-  const segments = location.pathname.split("/");
-
+export function Breadcrumbs({ matches }: { matches: CustomMatch[] }) {
   return (
     <Breadcrumb>
       <BreadcrumbList className="px-4">
-        {segments.map((segment, i) => {
+        {matches
+          .filter((match) => match.handle && match.handle.breadcrumb)
+          .map((match, index, arr) => (
+            <Fragment key={index}>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <BreadcrumbPage>
+                    {match.handle.breadcrumb(arr.length === index + 1, match)}
+                  </BreadcrumbPage>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              {index === arr.length - 1 ? <></> : <BreadcrumbSeparator />}
+            </Fragment>
+          ))}
+        {/* {segments.map((segment, i) => {
           return (
             <Fragment key={i}>
               <BreadcrumbItem>
@@ -36,7 +46,7 @@ export function Breadcrumbs() {
               {i === segments.length - 1 ? <></> : <BreadcrumbSeparator />}
             </Fragment>
           );
-        })}
+        })} */}
       </BreadcrumbList>
     </Breadcrumb>
   );
