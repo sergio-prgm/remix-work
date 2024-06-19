@@ -2,6 +2,8 @@ import { Link, Outlet, useMatches, type UIMatch } from "@remix-run/react";
 import { Navigation } from "./navigation";
 import { Breadcrumbs } from "./breadcrumbs";
 import { Button } from "~/components/ui/button";
+import { MainNav } from "./main-nav";
+import { SiteHeader } from "./header";
 
 export const handle = {
   breadcrumb: (disabled: boolean) => (
@@ -19,7 +21,10 @@ export default function Base() {
   const matches = useMatches() as CustomMatch[];
   return (
     <div>
-      <Navigation />
+      {/* <Navigation /> */}
+      {/* <MainNav /> */}
+      <SiteHeader />
+
       {/* <Breadcrumbs /> */}
       <Breadcrumbs matches={matches} />
       <div className="px-4">

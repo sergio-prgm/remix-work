@@ -7,7 +7,7 @@
 - [x] setup darkmode
 - [x] propse basic layout
 - [x] use proper breadcrumbs
-- [ ] get theming working
+- [x] get theming working
 
 ### Research
 
