@@ -18,7 +18,7 @@ export function MainNav() {
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <NavLink
-          to="/docs"
+          to="/candidates"
           className={({ isActive }) =>
             cn(
               "transition-colors hover:text-foreground/80",
@@ -26,10 +26,10 @@ export function MainNav() {
             )
           }
         >
-          Docs
+          Candidates
         </NavLink>
         <NavLink
-          to="/docs/components"
+          to="/job-offers"
           className={({ isActive }) =>
             cn(
               "transition-colors hover:text-foreground/80",
@@ -38,43 +38,7 @@ export function MainNav() {
             )
           }
         >
-          Components
-        </NavLink>
-        <NavLink
-          to="/themes"
-          className={({ isActive }) =>
-            cn(
-              "transition-colors hover:text-foreground/80",
-              // pathname?.startsWith("/themes")
-              isActive ? "text-foreground" : "text-foreground/60",
-            )
-          }
-        >
-          Themes
-        </NavLink>
-        <NavLink
-          to="/examples"
-          className={({ isActive }) =>
-            cn(
-              "transition-colors hover:text-foreground/80",
-              // pathname?.startsWith("/examples")
-              isActive ? "text-foreground" : "text-foreground/60",
-            )
-          }
-        >
-          Examples
-        </NavLink>
-        <NavLink
-          to="/blocks"
-          className={({ isActive }) =>
-            cn(
-              "transition-colors hover:text-foreground/80",
-              // pathname?.startsWith("/blocks")
-              isActive ? "text-foreground" : "text-foreground/60",
-            )
-          }
-        >
-          Blocks
+          Job Offers
         </NavLink>
         {/* <Link
           // href={siteConfig.links.github}
