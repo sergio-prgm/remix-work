@@ -5,11 +5,11 @@ export const handle = {
   breadcrumb: (disabled: boolean) =>
     disabled ? (
       <Button variant="link" disabled>
-        Candidates
+        Job Offers
       </Button>
     ) : (
       <Button variant="link" asChild>
-        <Link to="/candidates">Candidates</Link>
+        <Link to="/candidates">Job Offers</Link>
       </Button>
     ),
 };

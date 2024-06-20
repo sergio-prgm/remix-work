@@ -20,8 +20,8 @@ Segment | Sub-segment | Progress |
 Candidates | List | - |
 Candidates | Upload | - |
 Candidates | Individual | - |
-JobOffers | List | - |
-JobOffers | New | - |
+JobOffers | List | X (implemented list) |
+JobOffers | New | X (implemented dialog form [doesn't work]) |
 JobOffers | Individual | - |
 JobOffers | Assessment | - |
 JobOffers | Top Candidates | - |
