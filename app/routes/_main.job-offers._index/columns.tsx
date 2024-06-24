@@ -19,6 +19,7 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import { cn } from "~/lib/utils";
+import { Link } from "@remix-run/react";
 
 export type Payment = {
   id: string;
@@ -32,8 +33,8 @@ export type JobOffer = {
   name: string;
   max_salary: number;
   min_salary: number;
-  qualified: number;
-  unqualified: number;
+  qualified_candidates: number;
+  unqualified_candidates: number;
   created_at: string;
 };
 
@@ -77,19 +78,19 @@ export const columns: ColumnDef<JobOffer>[] = [
     cell: ({ row }) => (
       <div className="space-x-2">
         <Badge className="bg-green-500/90 hover:bg-green-500/80">
-          {row.original.qualified}
+          {row.original.qualified_candidates}
         </Badge>
         <Badge className="bg-red-500/90 hover:bg-red-500/80">
-          {row.original.unqualified}
+          {row.original.unqualified_candidates}
         </Badge>
       </div>
     ),
   },
   {
     id: "actions",
-    // cell: ({ row }) => {
-    cell: () => {
-      // const jobOffer = row.original;
+    cell: ({ row }) => {
+      // cell: () => {
+      const jobOffer = row.original;
 
       return (
         <DropdownMenu>
@@ -108,7 +109,11 @@ export const columns: ColumnDef<JobOffer>[] = [
             >
               Copy payment ID
             </DropdownMenuItem> */}
-            <DropdownMenuItem>View Details</DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link to={`/job-offers/${jobOffer.id.toString()}`}>
+                View Details
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Top</DropdownMenuItem>
             <DropdownMenuSeparator />
