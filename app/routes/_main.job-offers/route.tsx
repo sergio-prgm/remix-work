@@ -9,7 +9,7 @@ export const handle = {
       </Button>
     ) : (
       <Button variant="link" asChild>
-        <Link to="/candidates">Job Offers</Link>
+        <Link to="/job-offers">Job Offers</Link>
       </Button>
     ),
 };
