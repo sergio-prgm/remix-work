@@ -33,7 +33,7 @@ export const handle = {
       </Button>
     ) : (
       <Button variant="link" asChild>
-        <Link to="/candidates/new">{data.name}</Link>
+        <Link to="/job-offers">{data.name}</Link>
       </Button>
     );
   },
