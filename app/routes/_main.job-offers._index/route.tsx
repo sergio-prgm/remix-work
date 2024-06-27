@@ -22,7 +22,7 @@ import { Textarea } from "~/components/ui/textarea";
 // import {type Payment} from "./columns"
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { DataTable } from "./data-table";
+import { DataTable } from "../../components/data-table";
 import { columns } from "./columns";
 import { BACKEND_URL } from "~/lib/config";
 
@@ -35,7 +35,7 @@ export async function loader() {
   });
 }
 
-export default function Candidates() {
+export default function JobOffers() {
   const { jobOffers } = useLoaderData<typeof loader>();
   return (
     <div>
