@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1719744562227,
+      "tag": "0000_gorgeous_mother_askani",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1719744597984,
+      "tag": "0001_seed",
+      "breakpoints": true
+    }
+  ]
+}

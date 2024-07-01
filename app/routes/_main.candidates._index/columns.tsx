@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "~/components/ui/button";
-import { Badge } from "~/components/ui/badge";
+// import { Badge } from "~/components/ui/badge";
 import { Checkbox } from "~/components/ui/checkbox";
 import {
   DropdownMenu,
@@ -20,13 +20,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { cn } from "~/lib/utils";
 import { Link } from "@remix-run/react";
-
-export type Payment = {
-  id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
-};
+import type { SelectResources } from "~/lib/server/schema";
 
 export type JobOffer = {
   id: number;
@@ -38,7 +32,7 @@ export type JobOffer = {
   created_at: string;
 };
 
-export const columns: ColumnDef<JobOffer>[] = [
+export const columns: ColumnDef<SelectResources>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -62,30 +56,36 @@ export const columns: ColumnDef<JobOffer>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "name",
+    accessorKey: "product",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader column={column} title="Product" />
     ),
   },
   {
-    accessorKey: "created_at",
+    accessorKey: "createdAt",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Created At" />
     ),
   },
   {
-    header: "Candidates",
-    cell: ({ row }) => (
-      <div className="space-x-2">
-        <Badge className="bg-green-500/90 hover:bg-green-500/80">
-          {row.original.qualified_candidates}
-        </Badge>
-        <Badge className="bg-red-500/90 hover:bg-red-500/80">
-          {row.original.unqualified_candidates}
-        </Badge>
-      </div>
+    accessorKey: "productCategory",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Product Category" />
     ),
   },
+  // {
+  //   header: "Candidates",
+  //   cell: ({ row }) => (
+  //     <div className="space-x-2">
+  //       <Badge className="bg-green-500/90 hover:bg-green-500/80">
+  //         {row.original.qualified_candidates}
+  //       </Badge>
+  //       <Badge className="bg-red-500/90 hover:bg-red-500/80">
+  //         {row.original.unqualified_candidates}
+  //       </Badge>
+  //     </div>
+  //   ),
+  // },
   {
     id: "actions",
     cell: ({ row }) => {
